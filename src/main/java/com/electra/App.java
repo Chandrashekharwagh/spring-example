@@ -12,15 +12,15 @@ public class App {
         UserService userService = (UserService) context.getBean("UserService");
 
         // Adding users
-        userService.addUser(new User(1, "Name1", "john@example.com"));
-        userService.addUser(new User(2, "Name2", "jane@example.com"));
+        userService.addUser(new User(1, "Name1", "name1@example.com"));
+        userService.addUser(new User(2, "Name2", "name2@example.com"));
 
         // Retrieving a user
         User user = userService.getUserById(1);
         System.out.println("Retrieved User: " + user);
 
         // Updating a user
-        userService.updateUser(new User(1, "Name3", "johnsmith@example.com"));
+        userService.updateUser(new User(1, "Name3", "name3@example.com"));
         System.out.println("Updated User: " + userService.getUserById(1));
 
         // Deleting a user
